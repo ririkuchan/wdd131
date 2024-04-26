@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Permanent+Marker&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #435bdf;
+    --secondary-color: #d99be2;
+    --font-primary: "Acme";
+    --font-secondary: "Permanent Marker";
+}
+  
+body {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+}
+
+nav {
+    background-color: #b1dbf7;
+    display: flex;
+    justify-content: space-around;
+	max-width: 800px;
+}
+
+nav a:hover {
+    color: var(--secondary-color);  
+    background-color: bisque;
+    text-decoration: underline;  /* 下線を追加 */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
