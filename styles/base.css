@@ -16,13 +16,23 @@
 body {
     font-family: var(--font-primary);
     color: var(--primary-color);
+    line-height: 1.6;
+}
+
+h1 {
+    background-color: #ddd;
+    max-width: 1200px;
+
 }
 
 nav {
     background-color: #b1dbf7;
     display: flex;
     justify-content: space-around;
-	max-width: 800px;
+    align-items: center;
+    padding: 1rem;
+	max-width: 1200px;
+    color: white;
 }
 
 nav a:hover {
@@ -33,7 +43,46 @@ nav a:hover {
 
 main {
     max-width: 1200px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 960px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #635252;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #b1b1b1; /* Blue line */
+    margin: 10px 0;
+}
+
+.card ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+figure {
+    margin: 0; /* remove default margin from figure */
 }
