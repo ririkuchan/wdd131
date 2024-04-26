@@ -36,8 +36,7 @@ nav {
 }
 
 nav a:hover {
-    color: var(--secondary-color);  
-    background-color: bisque;
+    color: #6178a1;  
     text-decoration: underline;  /* 下線を追加 */
 }
 
