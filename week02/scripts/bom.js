@@ -1,16 +1,39 @@
-//DocumentからHTML要素を選択する：document.querySelector
+// DocumentからHTML要素を選択する：document.querySelector
 const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
 const list = document.querySelector('ul');
-//要素を作成する：document.createElement
-const li =  document.createElement('li');
-const deleteButton = document.createElement('button');
-//li要素変数textContentまたは innerHTMLに入力値を 設定します。
-li.textContent = input.ariaValue;
-//ボタン textContent に ❌ を入力します。
-deleteButton.textContent = '❌';
-//追加
-li.append(deleteButton);
-li.append(li);
 
+// Add Chapterボタンのイベントリスナーを作成
+button.addEventListener('click', function() {
+    if (input.value.trim() !== '') {
+        // 入力が空でない場合に実行するコード
 
+        // リストアイテムを作成
+        let li = document.createElement('li');
+        li.textContent = input.value;
+
+        // 削除ボタンを作成
+        let deleteButton = document.createElement('button');
+        deleteButton.textContent = '❌';
+
+        // リストアイテムに削除ボタンを追加
+        li.appendChild(deleteButton);
+        list.appendChild(li);
+
+        // 削除ボタンにイベントリスナーを追加
+        deleteButton.addEventListener('click', function() {
+            list.removeChild(li);
+            input.focus();
+        });
+
+        // 入力フィールドをクリア
+        input.value = '';
+    } else {
+        // 空の入力を処理
+        alert('Please enter the book and chapter.');
+        input.focus();
+    }
+
+    // 入力フィールドにフォーカスを設定
+    input.focus();
+});
