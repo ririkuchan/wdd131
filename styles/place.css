@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Sedan+SC&display=swap');
+/* 
+font-family: "Sedan SC", serif;
+font-family: "Roboto Slab", serif;
+*/
+
+body {
+    font-family: "Sedan SC";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, main, footer {
+    padding: 1rem;
+}
+
+header {
+    background-color: #159904;
+    color: white;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animal img {
+    max-width: 100%;
+    height: auto;
+}
+
+.data, .weather {
+    margin: 1rem 0;
+    width: 80%;
+    max-width: 600px;
+    border: 1px solid #159904;
+    padding: 1rem;
+    background-color: bisque;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(2, 121, 128);
+    color: white;
+    padding: 1rem;
+}
