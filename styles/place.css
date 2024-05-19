@@ -4,6 +4,12 @@ font-family: "Sedan SC", serif;
 font-family: "Roboto Slab", serif;
 */
 
+:root {
+    --main-bg-color: bisque;
+    --main-border-color: #159904;
+}
+
+
 body {
     font-family: "Sedan SC";
     margin: 0;
@@ -16,7 +22,7 @@ header, main, footer {
 }
 
 header {
-    background-color: #159904;
+    background-color: var(--main-bg-color);
     color: white;
     text-align: center;
     padding: 1rem;
