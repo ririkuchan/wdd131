@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     createTempleCard();
+
+    document.getElementById('filter-old').addEventListener('click', () => filterTemples('old'));
+    document.getElementById('filter-new').addEventListener('click', () => filterTemples('new'));
+    document.getElementById('filter-large').addEventListener('click', () => filterTemples('large'));
+    document.getElementById('filter-small').addEventListener('click', () => filterTemples('small'));
+    document.getElementById('filter-home').addEventListener('click', () => filterTemples('home'));
 });
 
 const temples = [
@@ -65,11 +71,38 @@ const temples = [
       area: 116642,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add more temple objects here...
+
+    {
+        templeName: "Mexico City Mexico",
+        location: "Mexico City, Mexico",
+        dedicated: "1983, December, 2",
+        area: 116642,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+
+    {
+        templeName: "Mexico City Mexico",
+        location: "Mexico City, Mexico",
+        dedicated: "1983, December, 2",
+        area: 116642,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+
+    {
+        templeName: "Mexico City Mexico",
+        location: "Mexico City, Mexico",
+        dedicated: "1983, December, 2",
+        area: 116642,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+    
 ];
 
-function createTempleCard() {
-    temples.forEach(temple => {
+function createTempleCard(filteredTemples = temples) {
+    const container = document.querySelector(".res-grid");
+    container.innerHTML = ''; // Clear existing cards
+
+    filteredTemples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
@@ -91,6 +124,31 @@ function createTempleCard() {
         card.appendChild(area);
         card.appendChild(img);
 
-        document.querySelector(".res-grid").appendChild(card);
+        container.appendChild(card);
     });
+}
+
+function filterTemples(criteria) {
+    let filteredTemples;
+
+    switch (criteria) {
+        case 'old':
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+            break;
+        case 'new':
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+            break;
+        case 'large':
+            filteredTemples = temples.filter(temple => temple.area > 90000);
+            break;
+        case 'small':
+            filteredTemples = temples.filter(temple => temple.area < 10000);
+            break;
+        case 'home':
+        default:
+            filteredTemples = temples;
+            break;
+    }
+
+    createTempleCard(filteredTemples);
 }
