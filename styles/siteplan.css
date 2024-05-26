@@ -16,5 +16,5 @@
 }
 
 header, main {
-    font: var(--font-primary);
+    font-family: var(--font-primary);
 }
