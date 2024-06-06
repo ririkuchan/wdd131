@@ -34,3 +34,4 @@ window.addEventListener('load', () => {
     const reviewCounter = localStorage.getItem('reviewCounter');
     localStorage.setItem('reviewCounter', (parseInt(reviewCounter) + 1).toString());
 });
+ 
