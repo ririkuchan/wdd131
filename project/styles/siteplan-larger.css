@@ -33,6 +33,8 @@
         font-size: 1.5rem; /* フォントサイズを調整 */
         white-space: nowrap; /* テキストの折り返しを防ぐ */
     }
+
+
     
 }
 
@@ -40,10 +42,38 @@
     .itsme-item {
         flex: 1 1 calc(50% - 20px);
     }
+
+    .columns-container {
+        flex-direction: column;
+    }
+
+    .right-column, .left-column {
+        text-align: center;
+        padding: 0;
+    }
+
+    .right-column section, .left-column section {
+        margin: 0 auto 1rem;
+        width: 90%;
+    }
 }
 
 @media (max-width: 480px) {
     .itseme-item {
         flex: 1 1 100%;
+    }
+
+    .columns-container {
+        flex-direction: column;
+    }
+
+    .right-column, .left-column {
+        text-align: center;
+        padding: 0;
+    }
+
+    .right-column section, .left-column section {
+        margin: 0 auto 1rem;
+        width: 90%;
     }
 }
