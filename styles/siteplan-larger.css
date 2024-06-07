@@ -28,9 +28,22 @@
         height: 40px;
         margin: 0 auto;
     }
-    
+
     h1 {
         font-size: 1.5rem; /* フォントサイズを調整 */
         white-space: nowrap; /* テキストの折り返しを防ぐ */
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .itsme-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .itseme-item {
+        flex: 1 1 100%;
     }
 }

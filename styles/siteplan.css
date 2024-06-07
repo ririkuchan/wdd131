@@ -109,3 +109,97 @@ footer img {
     padding: 5px;
 
 }
+
+
+/* travelhtml */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.caption h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.caption p {
+    margin: 0.5rem 0 0;
+}
+
+
+
+/* mehtml */
+
+.itsme {
+    text-align: center;
+    padding: 1.7rem;
+}
+
+.itsme-container {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.itsme p {
+    padding: 0.5rem;
+}
+
+.itsme-item {
+    flex: 1 1 calc(14.28% - 10px);
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.itsme-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.itsme-item:hover {
+    transform: scale(1.05);
+}
+
+.itsme-item:hover img {
+    transform: scale(1.1);
+}
