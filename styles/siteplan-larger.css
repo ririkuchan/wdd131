@@ -28,4 +28,9 @@
         height: 40px;
         margin: 0 auto;
     }
+    
+    h1 {
+        font-size: 1.5rem; /* フォントサイズを調整 */
+        white-space: nowrap; /* テキストの折り返しを防ぐ */
+    }
 }
