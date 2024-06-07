@@ -23,7 +23,7 @@ header, main, footer {
 
 h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 nav {
@@ -61,7 +61,7 @@ header {
 
 main {
     padding: 2rem;
-    background-color: #f4e6f7;
+    background-color: #f3d8f8;
 }
 
 .hamburger {
@@ -202,4 +202,56 @@ footer img {
 
 .itsme-item:hover img {
     transform: scale(1.1);
+}
+
+
+/* siteplanhtml */
+
+
+.intro img {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 265px;
+}
+
+.hobbies, .qualifications, .passions, .goals {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.intro {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.columns-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.left-column, .right-column {
+    flex: 1;
+    padding: 1rem;
+}
+
+.left-column {
+    text-align: left;
+}
+
+.right-column {
+    text-align: left;
 }
