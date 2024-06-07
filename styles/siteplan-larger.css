@@ -1,0 +1,31 @@
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        flex-direction: column; /* ナビゲーション項目を縦方向に配置 */
+        background-color: #f1acf1;
+        border: solid 0.5px;
+        margin: 0.5rem 0;
+        align-items: center; 
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+}

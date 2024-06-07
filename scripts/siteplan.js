@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const yearSpan = document.getElementById('year');
-    const lastModifiedSpan = document.getElementById('lastModified');
-    
-    const currentYear = new Date().getFullYear();
-    yearSpan.textContent = currentYear;
-    
+    const year = new Date().getFullYear();
     const lastModified = document.lastModified;
-    lastModifiedSpan.textContent = lastModified;
+
+    document.getElementById('year').textContent = year;
+    document.getElementById('lastModified').textContent = lastModified;
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
 });
