@@ -226,6 +226,11 @@ footer img {
     text-align: center;
 }
 
+.intro h2 {
+    font-size: 3rem;
+}
+
+
 section {
     margin-bottom: 2rem;
 }
@@ -238,7 +243,6 @@ p {
 
 .columns-container {
     display: flex;
-    max-width: 1200px;
     width: 100%;
     gap: 20px;
 }
